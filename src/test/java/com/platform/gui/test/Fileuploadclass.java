@@ -106,7 +106,12 @@ public static String FILE_PATH = "src/test/resources/file.txt";
 		
 		List<WebElement> list1=driver.findElements(By.xpath(".//*[@id='input_apiKey']"));
 		System.out.println(list1.size());
-		list1.get(1).sendKeys("hello");
+		if (list1.get(1).isDisplayed()) {
+			list1.get(1).sendKeys("hello");
+			}
+		else{
+			System.out.println("display is not enabled";
+		}
 		driver.findElement(By.xpath(".//*[@id='swagger_sidebar']/div/div/div[2]/div[2]/div[2]/div/div[2]")).click();;
 			
 		//driver.switchTo().defaultContent();
