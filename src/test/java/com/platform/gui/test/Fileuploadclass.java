@@ -102,7 +102,11 @@ public static String FILE_PATH = "src/test/resources/file.txt";
 		
 		
 		//driver.findElement(By.xpath("//input[@id='edit-box-big' and @placeholder='Job Title *']"))
-		driver.findElement(By.xpath("//div[@class='panel-body']//div[@class='area controls']//input[@id='input_apiKey']")).sendKeys("14e3b094-1def-4673-a3fe-d4abaed56a9f");;
+		//driver.findElement(By.xpath("//div[@class='panel-body']//div[@class='area controls']//input[@id='input_apiKey']")).sendKeys("14e3b094-1def-4673-a3fe-d4abaed56a9f");;
+		
+		List<WebElement> list1=driver.findElements(By.xpath(".//*[@id='input_apiKey']"));
+		System.out.println(list1.size());
+		list1.get(1).sendKeys("hello");
 		driver.findElement(By.xpath(".//*[@id='swagger_sidebar']/div/div/div[2]/div[2]/div[2]/div/div[2]")).click();;
 			
 		//driver.switchTo().defaultContent();
