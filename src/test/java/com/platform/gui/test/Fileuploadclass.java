@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
+import org.openqa.selenium.Dimension;
 import com.thoughtworks.selenium.Wait;
 
 /**
@@ -39,7 +39,8 @@ public static String FILE_PATH = "src/test/resources/file.txt";
 		//System.setProperty("webdriver.chrome.driver", "C:\\eclipsEspace\\chromedriver.exe");
 		//WebDriver driver = new ChromeDriver();
 		driver.get("https://platform.systran.net/index/");
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(10000);
 		driver.findElement(By.xpath(".//*[@id='signinLink']")).click();
