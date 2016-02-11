@@ -103,7 +103,7 @@ public static String FILE_PATH = "src/test/resources/file.txt";
 		
 		//driver.findElement(By.xpath("//input[@id='edit-box-big' and @placeholder='Job Title *']"))
 		//driver.findElement(By.xpath("//div[@class='panel-body']//div[@class='area controls']//input[@id='input_apiKey']")).sendKeys("14e3b094-1def-4673-a3fe-d4abaed56a9f");;
-		
+		Thread.sleep(10000);
 		List<WebElement> list1=driver.findElements(By.xpath(".//*[@id='input_apiKey']"));
 		System.out.println(list1.size());
 		if (list1.get(1).isDisplayed()) {
