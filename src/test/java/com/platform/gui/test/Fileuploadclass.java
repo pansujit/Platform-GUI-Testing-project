@@ -110,7 +110,7 @@ public static String FILE_PATH = "src/test/resources/file.txt";
 			list1.get(1).sendKeys("hello");
 			}
 		else{
-			System.out.println("display is not enabled";
+			System.out.println("display is not enabled");
 		}
 		driver.findElement(By.xpath(".//*[@id='swagger_sidebar']/div/div/div[2]/div[2]/div[2]/div/div[2]")).click();;
 			
